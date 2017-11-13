@@ -1,5 +1,5 @@
 # Lenaldnwj
-###### /java/seedu/address/logic/commands/EditPersonDescriptorTest.java
+###### \java\seedu\address\logic\commands\EditPersonDescriptorTest.java
 ``` java
         // different phone -> returns false
         editedAmy = new EditPersonDescriptorBuilder(DESC_AMY).withPhone(VALID_PHONE_BOB).build();
@@ -9,7 +9,7 @@
         editedAmy = new EditPersonDescriptorBuilder(DESC_AMY).withParentPhone(VALID_PARENTPHONE_BOB).build();
         assertFalse(DESC_AMY.equals(editedAmy));
 ```
-###### /java/seedu/address/logic/parser/AddCommandParserTest.java
+###### \java\seedu\address\logic\parser\AddCommandParserTest.java
 ``` java
     @Test
     public void parse_optionalFieldsMissing_success() {
@@ -138,7 +138,7 @@
                 + VALID_FORMCLASS_BOB + VALID_GRADES_BOB, expectedMessage);
     }
 ```
-###### /java/seedu/address/logic/parser/AddCommandParserTest.java
+###### \java\seedu\address\logic\parser\AddCommandParserTest.java
 ``` java
     @Test
     public void optionalInput() {
@@ -189,7 +189,7 @@
                 + "c/673349 t/friends t/owesMoney p/ (Student phone not recorded)");
     }
 ```
-###### /java/seedu/address/logic/parser/EditCommandParserTest.java
+###### \java\seedu\address\logic\parser\EditCommandParserTest.java
 ``` java
         // phone
         userInput = targetIndex.getOneBased() + PHONE_DESC_AMY;
@@ -203,7 +203,7 @@
         expectedCommand = new EditCommand(targetIndex, descriptor);
         assertParseSuccess(parser, userInput, expectedCommand);
 ```
-###### /java/seedu/address/logic/parser/ParserUtilTest.java
+###### \java\seedu\address\logic\parser\ParserUtilTest.java
 ``` java
     @Test
     public void parseParentPhone_null_throwsNullPointerException() throws Exception {
@@ -231,7 +231,7 @@
     }
 
 ```
-###### /java/seedu/address/model/person/ParentPhoneTest.java
+###### \java\seedu\address\model\person\ParentPhoneTest.java
 ``` java
 package seedu.address.model.person;
 
@@ -259,7 +259,7 @@ public class ParentPhoneTest {
 
 }
 ```
-###### /java/seedu/address/model/person/PhoneTest.java
+###### \java\seedu\address\model\person\PhoneTest.java
 ``` java
 package seedu.address.model.person;
 
@@ -287,7 +287,7 @@ public class PhoneTest {
 
 }
 ```
-###### /java/seedu/address/testutil/EditPersonDescriptorBuilder.java
+###### \java\seedu\address\testutil\EditPersonDescriptorBuilder.java
 ``` java
     /**
      * Sets the {@code ParentPhone} of the {@code EditPersonDescriptor} that we are building.
@@ -301,7 +301,7 @@ public class PhoneTest {
         return this;
     }
 ```
-###### /java/seedu/address/testutil/PersonBuilder.java
+###### \java\seedu\address\testutil\PersonBuilder.java
 ``` java
     /**
      * Sets the {@code ParentPhone} of the {@code Person} that we are building.
@@ -315,7 +315,7 @@ public class PhoneTest {
         return this;
     }
 ```
-###### /java/seedu/address/ui/PersonCardTest.java
+###### \java\seedu\address\ui\PersonCardTest.java
 ``` java
     @Test
     public void obtainTagColors() {
@@ -373,7 +373,7 @@ public class PhoneTest {
 
     }
 ```
-###### /java/seedu/address/ui/PersonCardTest.java
+###### \java\seedu\address\ui\PersonCardTest.java
 ``` java
 
     @Test
@@ -419,7 +419,7 @@ public class PhoneTest {
     }
 }
 ```
-###### /java/systemtests/AddCommandSystemTest.java
+###### \java\systemtests\AddCommandSystemTest.java
 ``` java
 
         /* Case: missing student phone -> added */
@@ -513,7 +513,7 @@ public class PhoneTest {
                 + FORMCLASS_DESC_AMY + GRADES_DESC_AMY + TAG_DESC_FRIEND;
         assertCommandSuccess(command, toAdd);
 ```
-###### /java/systemtests/EditCommandSystemTest.java
+###### \java\systemtests\EditCommandSystemTest.java
 ``` java
         /* Case: invalid parentPhone -> rejected */
         assertCommandFailure(EditCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased()

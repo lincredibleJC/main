@@ -1,5 +1,5 @@
 # limcel
-###### /java/guitests/guihandles/ExtendedPersonCardHandle.java
+###### \java\guitests\guihandles\ExtendedPersonCardHandle.java
 ``` java
 /**
  * Provides a handle to a person card in the person list panel.
@@ -72,7 +72,7 @@ public class ExtendedPersonCardHandle extends NodeHandle<Node> {
     }
 }
 ```
-###### /java/seedu/address/commons/core/MessagesTest.java
+###### \java\seedu\address\commons\core\MessagesTest.java
 ``` java
 public class MessagesTest {
 
@@ -92,7 +92,7 @@ public class MessagesTest {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/AddCommandTest.java
+###### \java\seedu\address\logic\commands\AddCommandTest.java
 ``` java
         @Override
         public void deleteTag(Tag tag) throws PersonNotFoundException, DuplicatePersonException {
@@ -121,7 +121,7 @@ public class MessagesTest {
             return getScheduleList();
         }
 ```
-###### /java/seedu/address/logic/commands/DeleteScheduleCommandTest.java
+###### \java\seedu\address\logic\commands\DeleteScheduleCommandTest.java
 ``` java
 /**
  * Contains integration tests (interaction with the Model) and unit tests for {@code DeleteScheduleCommand}.
@@ -210,7 +210,7 @@ public class DeleteScheduleCommandTest {
 
 }
 ```
-###### /java/seedu/address/logic/commands/ScheduleCommandTest.java
+###### \java\seedu\address\logic\commands\ScheduleCommandTest.java
 ``` java
 public class ScheduleCommandTest {
     @Rule
@@ -297,7 +297,7 @@ public class ScheduleCommandTest {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/SortCommandTest.java
+###### \java\seedu\address\logic\commands\SortCommandTest.java
 ``` java
 public class SortCommandTest {
 
@@ -331,7 +331,7 @@ public class SortCommandTest {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/ViewScheduleCommandTest.java
+###### \java\seedu\address\logic\commands\ViewScheduleCommandTest.java
 ``` java
 public class ViewScheduleCommandTest {
     @Rule
@@ -365,7 +365,7 @@ public class ViewScheduleCommandTest {
     }
 }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_sort() throws Exception {
@@ -425,7 +425,7 @@ public class ViewScheduleCommandTest {
         assertEquals(new DeleteScheduleCommand(INDEX_FIRST_SCHEDULE), command);
     }
 ```
-###### /java/seedu/address/logic/parser/ParserUtilTest.java
+###### \java\seedu\address\logic\parser\ParserUtilTest.java
 ``` java
     @Test
     public void parseSchedule_null_throwsNullPointerException() throws Exception {
@@ -438,7 +438,7 @@ public class ViewScheduleCommandTest {
         assertFalse(ParserUtil.parseSchedule(Optional.empty()).isPresent());
     }
 ```
-###### /java/seedu/address/logic/parser/ScheduleCommandParserTest.java
+###### \java\seedu\address\logic\parser\ScheduleCommandParserTest.java
 ``` java
 public class ScheduleCommandParserTest {
 
@@ -477,7 +477,7 @@ public class ScheduleCommandParserTest {
     }
 }
 ```
-###### /java/seedu/address/model/AddressBookTest.java
+###### \java\seedu\address\model\AddressBookTest.java
 ``` java
     @Test
     public void getScheduleList_modifyList_throwsUnsupportedOperationException() {
@@ -485,14 +485,14 @@ public class ScheduleCommandParserTest {
         addressBook.getScheduleList().remove(0);
     }
 ```
-###### /java/seedu/address/model/AddressBookTest.java
+###### \java\seedu\address\model\AddressBookTest.java
 ``` java
         @Override
         public ObservableList<Schedule> getScheduleList() {
             return schedules;
         }
 ```
-###### /java/seedu/address/model/ModelManagerTest.java
+###### \java\seedu\address\model\ModelManagerTest.java
 ``` java
     @Test
     public void getScheduleList_modifyList_throwsUnsupportedOperationException() {
@@ -528,7 +528,7 @@ public class ScheduleCommandParserTest {
         assertFalse(addressBook.getPersonList().equals(oldAddressBook));
     }
 ```
-###### /java/seedu/address/model/person/PostalCodeTest.java
+###### \java\seedu\address\model\person\PostalCodeTest.java
 ``` java
 public class PostalCodeTest {
     @Test
@@ -546,7 +546,7 @@ public class PostalCodeTest {
     }
 }
 ```
-###### /java/seedu/address/model/UniquePersonListTest.java
+###### \java\seedu\address\model\UniquePersonListTest.java
 ``` java
 public class UniquePersonListTest {
     @Rule
@@ -614,7 +614,7 @@ public class UniquePersonListTest {
     }
 }
 ```
-###### /java/seedu/address/model/UniqueScheduleListTest.java
+###### \java\seedu\address\model\UniqueScheduleListTest.java
 ``` java
 public class UniqueScheduleListTest {
 
@@ -721,7 +721,7 @@ public class UniqueScheduleListTest {
         return date;
     }
 ```
-###### /java/seedu/address/model/UniqueTagListTest.java
+###### \java\seedu\address\model\UniqueTagListTest.java
 ``` java
     @Test
     public void testForDuplicateTags() {
@@ -732,7 +732,7 @@ public class UniqueScheduleListTest {
         }
     }
 ```
-###### /java/seedu/address/storage/XmlAddressBookStorageTest.java
+###### \java\seedu\address\storage\XmlAddressBookStorageTest.java
 ``` java
     @Test
     public void getScheduleList_modifyList_throwsUnsupportedOperationException() {
@@ -741,7 +741,7 @@ public class UniqueScheduleListTest {
         addressBook.getScheduleList().remove(0);
     }
 ```
-###### /java/seedu/address/storage/XmlAddressBookStorageTest.java
+###### \java\seedu\address\storage\XmlAddressBookStorageTest.java
 ``` java
     @Test
     public void createNewXmlAdaptedScheduleTest() throws IllegalValueException {
@@ -767,7 +767,7 @@ public class UniqueScheduleListTest {
         return expectedSchedule.equals(schedule);
     }
 ```
-###### /java/seedu/address/ui/ExtendedPersonCardTest.java
+###### \java\seedu\address\ui\ExtendedPersonCardTest.java
 ``` java
 public class ExtendedPersonCardTest extends GuiUnitTest {
     private ExtendedPersonCard extendedPersonCard;

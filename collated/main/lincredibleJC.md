@@ -1,5 +1,5 @@
 # lincredibleJC
-###### /java/seedu/address/commons/events/model/FilteredPersonListChangedEvent.java
+###### \java\seedu\address\commons\events\model\FilteredPersonListChangedEvent.java
 ``` java
 /** Represents the FilteredPersonList in the model has changed */
 public class FilteredPersonListChangedEvent extends BaseEvent {
@@ -20,7 +20,7 @@ public class FilteredPersonListChangedEvent extends BaseEvent {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/FindTagsCommand.java
+###### \java\seedu\address\logic\commands\FindTagsCommand.java
 ``` java
 /**
  * Finds and lists all persons in address book whose tags contains any of the argument keywords.
@@ -57,7 +57,7 @@ public class FindTagsCommand extends Command {
 
 }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParser.java
+###### \java\seedu\address\logic\parser\AddressBookParser.java
 ``` java
         switch (commandWord) {
 
@@ -141,7 +141,7 @@ public class FindTagsCommand extends Command {
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
         }
 ```
-###### /java/seedu/address/logic/parser/FindTagsCommandParser.java
+###### \java\seedu\address\logic\parser\FindTagsCommandParser.java
 ``` java
 /**
  * Parses input arguments and creates a new FindTagsCommand object
@@ -168,7 +168,7 @@ public class FindTagsCommandParser implements Parser<FindTagsCommand> {
 
 }
 ```
-###### /java/seedu/address/logic/parser/ParserUtil.java
+###### \java\seedu\address\logic\parser\ParserUtil.java
 ``` java
     /**
      * Parses a {@code Optional<String> formClass} into an {@code Optional<FormClass>} if {@code formClass}
@@ -190,7 +190,7 @@ public class FindTagsCommandParser implements Parser<FindTagsCommand> {
         return grades.isPresent() ? Optional.of(new Grades(grades.get())) : Optional.empty();
     }
 ```
-###### /java/seedu/address/logic/statistics/Statistics.java
+###### \java\seedu\address\logic\statistics\Statistics.java
 ``` java
 
 /**
@@ -435,14 +435,14 @@ public class Statistics {
 
 }
 ```
-###### /java/seedu/address/model/ModelManager.java
+###### \java\seedu\address\model\ModelManager.java
 ``` java
     /** Raises an event to update the StatisticsPanel */
     private void updateStatisticsPanel() {
         raise(new FilteredPersonListChangedEvent(filteredPersons));
     }
 ```
-###### /java/seedu/address/model/ModelManager.java
+###### \java\seedu\address\model\ModelManager.java
 ``` java
     @Override
     public void updateFilteredPersonList(Predicate<ReadOnlyPerson> predicate) {
@@ -451,7 +451,7 @@ public class Statistics {
         updateStatisticsPanel();
     }
 ```
-###### /java/seedu/address/model/person/FormClass.java
+###### \java\seedu\address\model\person\FormClass.java
 ``` java
 /**
  * Represents a Person's FormClass name in the address book.
@@ -507,7 +507,7 @@ public class FormClass {
 
 }
 ```
-###### /java/seedu/address/model/person/Grades.java
+###### \java\seedu\address\model\person\Grades.java
 ``` java
 /**
  * Represents a Person's Grades in the address book.
@@ -564,7 +564,7 @@ public class Grades {
 
 }
 ```
-###### /java/seedu/address/model/person/ReadOnlyPerson.java
+###### \java\seedu\address\model\person\ReadOnlyPerson.java
 ``` java
     default String getTagsAsString() {
         StringBuilder sb = new StringBuilder();
@@ -572,7 +572,7 @@ public class Grades {
         return sb.toString();
     }
 ```
-###### /java/seedu/address/model/person/TagsContainsKeywordsPredicate.java
+###### \java\seedu\address\model\person\TagsContainsKeywordsPredicate.java
 ``` java
 /**
  * Tests that a {@code ReadOnlyPerson}'s {@code Tag} matches any of the keywords given.
@@ -600,7 +600,7 @@ public class TagsContainsKeywordsPredicate implements Predicate<ReadOnlyPerson> 
 }
 
 ```
-###### /java/seedu/address/ui/StatisticsPanel.java
+###### \java\seedu\address\ui\StatisticsPanel.java
 ``` java
 /**
  * Statistics Panel that displays the statistics of a filteredList
@@ -662,7 +662,7 @@ public class StatisticsPanel extends UiPart<Region> {
 
 }
 ```
-###### /resources/view/StatisticsPanel.fxml
+###### \resources\view\StatisticsPanel.fxml
 ``` fxml
 
 <?import javafx.geometry.Insets?>

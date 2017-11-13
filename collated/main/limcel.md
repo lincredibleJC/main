@@ -1,5 +1,5 @@
 # limcel
-###### /java/seedu/address/commons/events/model/ScheduleListChangedEvent.java
+###### \java\seedu\address\commons\events\model\ScheduleListChangedEvent.java
 ``` java
 /**
  * Represents a change in the current schedule list
@@ -18,7 +18,7 @@ public class ScheduleListChangedEvent extends BaseEvent {
     }
 }
 ```
-###### /java/seedu/address/commons/events/ui/JumpToTabRequestEvent.java
+###### \java\seedu\address\commons\events\ui\JumpToTabRequestEvent.java
 ``` java
 public class JumpToTabRequestEvent extends BaseEvent {
 
@@ -35,7 +35,7 @@ public class JumpToTabRequestEvent extends BaseEvent {
 
 }
 ```
-###### /java/seedu/address/logic/commands/DeleteScheduleCommand.java
+###### \java\seedu\address\logic\commands\DeleteScheduleCommand.java
 ``` java
 /**
  * Deletes a schedule identified from the address book's schedule list.
@@ -87,7 +87,7 @@ public class DeleteScheduleCommand extends Command {
 
 }
 ```
-###### /java/seedu/address/logic/commands/ScheduleCommand.java
+###### \java\seedu\address\logic\commands\ScheduleCommand.java
 ``` java
 /**
  * Schedules a consultation timeslot with the person identified using it's last displayed index from the address book.
@@ -162,7 +162,7 @@ public class ScheduleCommand extends Command {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/SortCommand.java
+###### \java\seedu\address\logic\commands\SortCommand.java
 ``` java
 /**
  * Sorts all contacts in alphabetical order by their names from the address book.
@@ -189,7 +189,7 @@ public class SortCommand extends Command {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/TabCommand.java
+###### \java\seedu\address\logic\commands\TabCommand.java
 ``` java
 public class TabCommand extends Command {
     public static final String COMMAND_WORD = "tab";
@@ -230,7 +230,7 @@ public class TabCommand extends Command {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/ViewScheduleCommand.java
+###### \java\seedu\address\logic\commands\ViewScheduleCommand.java
 ``` java
 /**
  * Lists all persons in the address book to the user.
@@ -261,18 +261,18 @@ public class ViewScheduleCommand extends Command {
     }
 }
 ```
-###### /java/seedu/address/logic/Logic.java
+###### \java\seedu\address\logic\Logic.java
 ``` java
     /** Returns an unmodifiable view of the schedule list */
     ObservableList<Schedule> getScheduleList();
 ```
-###### /java/seedu/address/logic/LogicManager.java
+###### \java\seedu\address\logic\LogicManager.java
 ``` java
     @Override
     public ObservableList<Schedule> getScheduleList() {
         return model.getScheduleList(); }
 ```
-###### /java/seedu/address/logic/parser/ScheduleCommandParser.java
+###### \java\seedu\address\logic\parser\ScheduleCommandParser.java
 ``` java
 /**
  * Parses input arguments and creates a new ScheduleCommand object
@@ -344,7 +344,7 @@ public class ScheduleCommandParser implements Parser<ScheduleCommand> {
     }
 }
 ```
-###### /java/seedu/address/logic/parser/TabCommandParser.java
+###### \java\seedu\address\logic\parser\TabCommandParser.java
 ``` java
 public class TabCommandParser implements Parser<TabCommand> {
 
@@ -364,7 +364,7 @@ public class TabCommandParser implements Parser<TabCommand> {
     }
 }
 ```
-###### /java/seedu/address/model/AddressBook.java
+###### \java\seedu\address\model\AddressBook.java
 ``` java
     //// schedule-level operations
 
@@ -376,13 +376,13 @@ public class TabCommandParser implements Parser<TabCommand> {
         schedules.remove(s);
     }
 ```
-###### /java/seedu/address/model/AddressBook.java
+###### \java\seedu\address\model\AddressBook.java
 ``` java
     public ObservableList<Schedule> getScheduleList() {
         return schedules.asObservableList();
     }
 ```
-###### /java/seedu/address/model/AddressBook.java
+###### \java\seedu\address\model\AddressBook.java
 ``` java
     public ObservableList<ReadOnlyPerson> listOfPersonNameSorted() {
         return persons.asObservableListSortedByName();
@@ -392,7 +392,7 @@ public class TabCommandParser implements Parser<TabCommand> {
         return schedules.asObservableListSortedChronologically();
     }
 ```
-###### /java/seedu/address/model/Model.java
+###### \java\seedu\address\model\Model.java
 ``` java
     /**
      * Deletes the given {@code tag} associated with any person in the addressbook.
@@ -402,7 +402,7 @@ public class TabCommandParser implements Parser<TabCommand> {
      */
     void deleteTag(Tag tag) throws PersonNotFoundException, DuplicatePersonException, TagNotFoundException;
 ```
-###### /java/seedu/address/model/Model.java
+###### \java\seedu\address\model\Model.java
 ``` java
     /**
      * Sorts the list in alphabetical order.
@@ -419,7 +419,7 @@ public class TabCommandParser implements Parser<TabCommand> {
     /** Returns an unmodifiable view of the schedules list */
     ObservableList<Schedule> getScheduleList();
 ```
-###### /java/seedu/address/model/ModelManager.java
+###### \java\seedu\address\model\ModelManager.java
 ``` java
     @Override
     public void deleteTag(Tag tag) throws PersonNotFoundException, DuplicatePersonException, TagNotFoundException {
@@ -467,7 +467,7 @@ public class TabCommandParser implements Parser<TabCommand> {
         return FXCollections.unmodifiableObservableList(list);
     }
 ```
-###### /java/seedu/address/model/person/PostalCode.java
+###### \java\seedu\address\model\person\PostalCode.java
 ``` java
 /**
  * Represents a Person's postal code in the address book.
@@ -518,7 +518,7 @@ public class PostalCode {
     }
 }
 ```
-###### /java/seedu/address/model/person/UniquePersonList.java
+###### \java\seedu\address\model\person\UniquePersonList.java
 ``` java
     /**
      * Returns an observable list as as an unmodifiable {@code ObservableList}
@@ -529,7 +529,7 @@ public class PostalCode {
         return FXCollections.unmodifiableObservableList(mappedList);
     }
 ```
-###### /java/seedu/address/model/ReadOnlyAddressBook.java
+###### \java\seedu\address\model\ReadOnlyAddressBook.java
 ``` java
     /**
      * Returns an unmodifiable view of the schedules list.
@@ -537,14 +537,14 @@ public class PostalCode {
      */
     ObservableList<Schedule> getScheduleList();
 ```
-###### /java/seedu/address/model/schedule/exceptions/ScheduleNotFoundException.java
+###### \java\seedu\address\model\schedule\exceptions\ScheduleNotFoundException.java
 ``` java
 /**
  * Signals that the operation is unable to find the specified schedule.
  */
 public class ScheduleNotFoundException extends Exception {}
 ```
-###### /java/seedu/address/model/schedule/Schedule.java
+###### \java\seedu\address\model\schedule\Schedule.java
 ``` java
 /**
  * Represents the user's schedule in the address book.
@@ -597,7 +597,7 @@ public class Schedule {
     }
 }
 ```
-###### /java/seedu/address/model/schedule/UniqueScheduleList.java
+###### \java\seedu\address\model\schedule\UniqueScheduleList.java
 ``` java
 /**
  * A list of schedules that enforces no nulls between its elements.
@@ -701,7 +701,7 @@ public class UniqueScheduleList implements Iterable<Schedule> {
         return FXCollections.unmodifiableObservableList(internalList);
     }
 ```
-###### /java/seedu/address/storage/XmlAdaptedSchedule.java
+###### \java\seedu\address\storage\XmlAdaptedSchedule.java
 ``` java
 /**
  * JAXB-friendly adapted version of the Schedule.
@@ -753,7 +753,7 @@ public class XmlAdaptedSchedule {
     }
 }
 ```
-###### /java/seedu/address/storage/XmlSerializableAddressBook.java
+###### \java\seedu\address\storage\XmlSerializableAddressBook.java
 ``` java
     @Override
     public ObservableList<Schedule> getScheduleList() {
@@ -768,7 +768,7 @@ public class XmlAdaptedSchedule {
         return FXCollections.unmodifiableObservableList(schedules);
     }
 ```
-###### /java/seedu/address/ui/ExtendedPersonCard.java
+###### \java\seedu\address\ui\ExtendedPersonCard.java
 ``` java
 /**
  * An UI component that displays all information of a {@code Person}.
@@ -823,7 +823,7 @@ public class ExtendedPersonCard extends UiPart<Region> {
     }
 
 ```
-###### /java/seedu/address/ui/ExtendedPersonCard.java
+###### \java\seedu\address\ui\ExtendedPersonCard.java
 ``` java
     @Subscribe
     private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {
@@ -833,7 +833,7 @@ public class ExtendedPersonCard extends UiPart<Region> {
 
 }
 ```
-###### /resources/view/ExtendedPersonCard.fxml
+###### \resources\view\ExtendedPersonCard.fxml
 ``` fxml
 
 <?import javafx.geometry.Insets?>

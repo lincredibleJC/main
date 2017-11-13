@@ -1,5 +1,5 @@
 # nahtanojmil
-###### /java/guitests/guihandles/GraphPanelHandle.java
+###### \java\guitests\guihandles\GraphPanelHandle.java
 ``` java
 /**
  * Provides a handle to the graph of a person in the person list panel.
@@ -24,7 +24,7 @@ public class GraphPanelHandle extends NodeHandle<Node> {
 
 }
 ```
-###### /java/guitests/guihandles/HomePanelHandle.java
+###### \java\guitests\guihandles\HomePanelHandle.java
 ``` java
 /**
  * Provides a handle to the homePanel.
@@ -39,7 +39,7 @@ public class HomePanelHandle extends NodeHandle<Node> {
 
 }
 ```
-###### /java/seedu/address/logic/commands/HomeCommandTest.java
+###### \java\seedu\address\logic\commands\HomeCommandTest.java
 ``` java
 public class HomeCommandTest {
 
@@ -58,7 +58,7 @@ public class HomeCommandTest {
 
 
 ```
-###### /java/seedu/address/logic/commands/RemarkCommandTest.java
+###### \java\seedu\address\logic\commands\RemarkCommandTest.java
 ``` java
 public class RemarkCommandTest {
 
@@ -165,7 +165,7 @@ public class RemarkCommandTest {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/TabCommandTest.java
+###### \java\seedu\address\logic\commands\TabCommandTest.java
 ``` java
 public class TabCommandTest {
 
@@ -183,7 +183,7 @@ public class TabCommandTest {
     }
 }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_remarkCommandWord_returnsRemarkCommand() throws Exception {
@@ -212,7 +212,7 @@ public class TabCommandTest {
         assertTrue(parser.parseCommand("home") instanceof HomeCommand);
     }
 ```
-###### /java/seedu/address/logic/parser/ParserUtilTest.java
+###### \java\seedu\address\logic\parser\ParserUtilTest.java
 ``` java
     @Test
     public void parseRemark_invalidValue_throwsIllegalValueException() throws Exception {
@@ -233,7 +233,7 @@ public class TabCommandTest {
         assertEquals(expectedRemark, actualRemark.get());
     }
 ```
-###### /java/seedu/address/logic/parser/RemarkCommandParserTest.java
+###### \java\seedu\address\logic\parser\RemarkCommandParserTest.java
 ``` java
 public class RemarkCommandParserTest {
     private RemarkCommandParser parser = new RemarkCommandParser();
@@ -263,7 +263,7 @@ public class RemarkCommandParserTest {
     }
 }
 ```
-###### /java/seedu/address/logic/parser/TabCommandParserTest.java
+###### \java\seedu\address\logic\parser\TabCommandParserTest.java
 ``` java
 public class TabCommandParserTest {
 
@@ -280,7 +280,7 @@ public class TabCommandParserTest {
     }
 }
 ```
-###### /java/seedu/address/testutil/PersonBuilder.java
+###### \java\seedu\address\testutil\PersonBuilder.java
 ``` java
     /**
      * Sets the {@code Remark} of the {@code Person} that we are building.
@@ -291,7 +291,7 @@ public class TabCommandParserTest {
         return this;
     }
 ```
-###### /java/seedu/address/ui/GraphPanelTest.java
+###### \java\seedu\address\ui\GraphPanelTest.java
 ``` java
 public class GraphPanelTest extends GuiUnitTest {
 

@@ -1,5 +1,5 @@
 # lincredibleJC
-###### /java/guitests/guihandles/StatisticsPanelHandle.java
+###### \java\guitests\guihandles\StatisticsPanelHandle.java
 ``` java
 /**
  * Provides a handle to the Statistics panel.
@@ -72,7 +72,7 @@ public class StatisticsPanelHandle extends NodeHandle<Node> {
     }
 }
 ```
-###### /java/seedu/address/logic/commands/FindTagsCommandTest.java
+###### \java\seedu\address\logic\commands\FindTagsCommandTest.java
 ``` java
 
 /**
@@ -125,7 +125,7 @@ public class FindTagsCommandTest {
 
 }
 ```
-###### /java/seedu/address/logic/commands/SelectCommandTest.java
+###### \java\seedu\address\logic\commands\SelectCommandTest.java
 ``` java
     @Test
     public void execute_invalidIndexUnfilteredList_failure() {
@@ -135,7 +135,7 @@ public class FindTagsCommandTest {
         assertTrue(eventsCollectorRule.eventsCollector.isEmpty());
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_add() throws Exception {
@@ -144,7 +144,7 @@ public class FindTagsCommandTest {
         assertEquals(new AddCommand(person), command);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_clear() throws Exception {
@@ -152,7 +152,7 @@ public class FindTagsCommandTest {
         assertTrue(parser.parseCommand(ClearCommand.COMMAND_ALIAS + " 3") instanceof ClearCommand);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_delete() throws Exception {
@@ -161,7 +161,7 @@ public class FindTagsCommandTest {
         assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_edit() throws Exception {
@@ -172,7 +172,7 @@ public class FindTagsCommandTest {
         assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_find() throws Exception {
@@ -182,7 +182,7 @@ public class FindTagsCommandTest {
         assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_findtags() throws Exception {
@@ -192,7 +192,7 @@ public class FindTagsCommandTest {
         assertEquals(new FindTagsCommand(new TagsContainsKeywordsPredicate(keywords)), command);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_findtags() throws Exception {
@@ -202,7 +202,7 @@ public class FindTagsCommandTest {
         assertEquals(new FindTagsCommand(new TagsContainsKeywordsPredicate(keywords)), command);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_history() throws Exception {
@@ -217,7 +217,7 @@ public class FindTagsCommandTest {
         }
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_list() throws Exception {
@@ -225,7 +225,7 @@ public class FindTagsCommandTest {
         assertTrue(parser.parseCommand(ListCommand.COMMAND_ALIAS + " 3") instanceof ListCommand);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_alias_select() throws Exception {
@@ -234,7 +234,7 @@ public class FindTagsCommandTest {
         assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_redoCommandAlias_returnsRedoCommand() throws Exception {
@@ -242,7 +242,7 @@ public class FindTagsCommandTest {
         assertTrue(parser.parseCommand("r 1") instanceof RedoCommand);
     }
 ```
-###### /java/seedu/address/logic/parser/AddressBookParserTest.java
+###### \java\seedu\address\logic\parser\AddressBookParserTest.java
 ``` java
     @Test
     public void parseCommand_undoCommandAlias_returnsUndoCommand() throws Exception {
@@ -250,7 +250,7 @@ public class FindTagsCommandTest {
         assertTrue(parser.parseCommand("u 3") instanceof UndoCommand);
     }
 ```
-###### /java/seedu/address/logic/parser/EditCommandParserTest.java
+###### \java\seedu\address\logic\parser\EditCommandParserTest.java
 ``` java
     @Test
     public void parse_invalidValue_failure() {
@@ -294,7 +294,7 @@ public class FindTagsCommandTest {
                 + VALID_POSTALCODE_AMY, Name.MESSAGE_NAME_CONSTRAINTS);
     }
 ```
-###### /java/seedu/address/logic/parser/EditCommandParserTest.java
+###### \java\seedu\address\logic\parser\EditCommandParserTest.java
 ``` java
     @Test
     public void parse_allFieldsSpecified_success() {
@@ -313,7 +313,7 @@ public class FindTagsCommandTest {
         assertParseSuccess(parser, userInput, expectedCommand);
     }
 ```
-###### /java/seedu/address/logic/parser/FindTagsCommandParserTest.java
+###### \java\seedu\address\logic\parser\FindTagsCommandParserTest.java
 ``` java
 public class FindTagsCommandParserTest {
     private FindTagsCommandParser parser = new FindTagsCommandParser();
@@ -338,7 +338,7 @@ public class FindTagsCommandParserTest {
 
 }
 ```
-###### /java/seedu/address/logic/parser/ParserUtilTest.java
+###### \java\seedu\address\logic\parser\ParserUtilTest.java
 ``` java
     @Test
     public void parseGrades_null_throwsNullPointerException() throws Exception {
@@ -365,7 +365,7 @@ public class FindTagsCommandParserTest {
         assertEquals(expectedGrades, actualGrades.get());
     }
 ```
-###### /java/seedu/address/logic/statistics/StatisticsTest.java
+###### \java\seedu\address\logic\statistics\StatisticsTest.java
 ``` java
 public class StatisticsTest {
 
@@ -457,7 +457,7 @@ public class StatisticsTest {
 
 }
 ```
-###### /java/seedu/address/model/person/FormClassTest.java
+###### \java\seedu\address\model\person\FormClassTest.java
 ``` java
 public class FormClassTest {
     @Test
@@ -480,7 +480,7 @@ public class FormClassTest {
 
 }
 ```
-###### /java/seedu/address/model/person/GradesTest.java
+###### \java\seedu\address\model\person\GradesTest.java
 ``` java
 public class GradesTest {
     @Test
@@ -506,7 +506,7 @@ public class GradesTest {
     }
 }
 ```
-###### /java/seedu/address/model/person/TagsContainsKeywordsPredicateTest.java
+###### \java\seedu\address\model\person\TagsContainsKeywordsPredicateTest.java
 ``` java
 public class TagsContainsKeywordsPredicateTest {
 
@@ -568,7 +568,7 @@ public class TagsContainsKeywordsPredicateTest {
     }
 }
 ```
-###### /java/seedu/address/testutil/EditPersonDescriptorBuilder.java
+###### \java\seedu\address\testutil\EditPersonDescriptorBuilder.java
 ``` java
     /**
      * Sets the {@code FormClass} of the {@code EditPersonDescriptor} that we are building.
@@ -582,7 +582,7 @@ public class TagsContainsKeywordsPredicateTest {
         return this;
     }
 ```
-###### /java/seedu/address/testutil/EditPersonDescriptorBuilder.java
+###### \java\seedu\address\testutil\EditPersonDescriptorBuilder.java
 ``` java
     /**
      * Sets the {@code Grades} of the {@code EditPersonDescriptor} that we are building.
@@ -596,7 +596,7 @@ public class TagsContainsKeywordsPredicateTest {
         return this;
     }
 ```
-###### /java/seedu/address/testutil/PersonBuilder.java
+###### \java\seedu\address\testutil\PersonBuilder.java
 ``` java
     /**
      * Sets the {@code FormClass} of the {@code Person} that we are building.
@@ -610,7 +610,7 @@ public class TagsContainsKeywordsPredicateTest {
         return this;
     }
 ```
-###### /java/seedu/address/testutil/PersonBuilder.java
+###### \java\seedu\address\testutil\PersonBuilder.java
 ``` java
     /**
      * Sets the {@code Grades} of the {@code Person} that we are building.
@@ -624,7 +624,7 @@ public class TagsContainsKeywordsPredicateTest {
         return this;
     }
 ```
-###### /java/seedu/address/testutil/PersonUtil.java
+###### \java\seedu\address\testutil\PersonUtil.java
 ``` java
     /**
      * Returns an add command alias string for adding the {@code person}.
@@ -633,7 +633,7 @@ public class TagsContainsKeywordsPredicateTest {
         return AddCommand.COMMAND_ALIAS + " " + getPersonDetails(person);
     }
 ```
-###### /java/seedu/address/ui/StatisticsPanelTest.java
+###### \java\seedu\address\ui\StatisticsPanelTest.java
 ``` java
 public class StatisticsPanelTest extends GuiUnitTest {
 
@@ -663,7 +663,7 @@ public class StatisticsPanelTest extends GuiUnitTest {
 
 }
 ```
-###### /java/seedu/address/ui/testutil/GuiTestAssert.java
+###### \java\seedu\address\ui\testutil\GuiTestAssert.java
 ``` java
     /**
      * Asserts that {@code statisticsPanelHandle} displays the statistics correctly
@@ -682,7 +682,7 @@ public class StatisticsPanelTest extends GuiUnitTest {
         assertEquals(expectedStatistics.getInterquartileRangeString(), actualPanelHandle.getInterquartileLabel());
     }
 ```
-###### /java/systemtests/FindTagsCommandSystemTest.java
+###### \java\systemtests\FindTagsCommandSystemTest.java
 ``` java
 public class FindTagsCommandSystemTest extends AddressBookSystemTest {
 

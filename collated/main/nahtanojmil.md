@@ -1,5 +1,5 @@
 # nahtanojmil
-###### /java/seedu/address/commons/events/ui/HomeRequestEvent.java
+###### \java\seedu\address\commons\events\ui\HomeRequestEvent.java
 ``` java
 /**
  * Indicates a request to display home page
@@ -14,7 +14,7 @@ public class HomeRequestEvent extends BaseEvent {
 }
 
 ```
-###### /java/seedu/address/logic/commands/HomeCommand.java
+###### \java\seedu\address\logic\commands\HomeCommand.java
 ``` java
 public class HomeCommand extends Command {
 
@@ -33,7 +33,7 @@ public class HomeCommand extends Command {
 
 }
 ```
-###### /java/seedu/address/logic/commands/RemarkCommand.java
+###### \java\seedu\address\logic\commands\RemarkCommand.java
 ``` java
 /**
  * Changes the remark of an existing person in the address book.
@@ -113,7 +113,7 @@ public class RemarkCommand extends UndoableCommand {
     }
 }
 ```
-###### /java/seedu/address/logic/parser/ParserUtil.java
+###### \java\seedu\address\logic\parser\ParserUtil.java
 ``` java
     /**
      * Parses a {@code Optional<String> remark} into an {@code Optional<Remark>} if {@code remark}
@@ -124,32 +124,8 @@ public class RemarkCommand extends UndoableCommand {
         requireNonNull(remark);
         return remark.isPresent() ? Optional.of(new Remark(remark.get())) : Optional.empty();
     }
-
-    /**
-     * Parses {@code Collection<String> tags} into a {@code Set<Tag>}.
-     */
-    public static Set<Tag> parseTags(Collection<String> tags) throws IllegalValueException {
-        requireNonNull(tags);
-        final Set<Tag> tagSet = new HashSet<>();
-        for (String tagName : tags) {
-            tagSet.add(new Tag(tagName));
-        }
-        return tagSet;
-    }
-
-    /**
-     * Parses a {@code Optional<String> schedule} into an {@code Optional<Schedule>} if {@code schedule}
-     * is present.
-     * See header comment of this class regarding the use of {@code Optional} parameters.
-     */
-    public static Optional<Schedule> parseSchedule(Optional<String> schedule) throws IllegalValueException {
-        requireNonNull(schedule);
-        return schedule.isPresent() ? Optional.of(new Schedule(schedule.get())) : Optional.empty();
-    }
-
-}
 ```
-###### /java/seedu/address/logic/parser/RemarkCommandParser.java
+###### \java\seedu\address\logic\parser\RemarkCommandParser.java
 ``` java
 /**
  * Remark command parser
@@ -180,7 +156,7 @@ public class RemarkCommandParser implements Parser<RemarkCommand> {
     }
 }
 ```
-###### /java/seedu/address/model/person/Remark.java
+###### \java\seedu\address\model\person\Remark.java
 ``` java
 /**
  * Represents a Person's remark in the address book.
@@ -225,7 +201,7 @@ public class Remark {
 }
 
 ```
-###### /java/seedu/address/ui/GraphPanel.java
+###### \java\seedu\address\ui\GraphPanel.java
 ``` java
 /**
  * Displays the specified graphs that the user wants
@@ -342,7 +318,7 @@ public class GraphPanel extends UiPart<Region> {
     }
 }
 ```
-###### /java/seedu/address/ui/HomePanel.java
+###### \java\seedu\address\ui\HomePanel.java
 ``` java
 /**
  * Displays the home page on startup on when called upon
@@ -400,7 +376,7 @@ public class HomePanel extends UiPart<Region> {
 
 }
 ```
-###### /java/seedu/address/ui/MainWindow.java
+###### \java\seedu\address\ui\MainWindow.java
 ``` java
     /**
      * Fills up all the placeholders of this window.
@@ -431,7 +407,7 @@ public class HomePanel extends UiPart<Region> {
     }
 
 ```
-###### /java/seedu/address/ui/MainWindow.java
+###### \java\seedu\address\ui\MainWindow.java
 ``` java
     /**
      * change to home display page when the home command is parsed. @param valid
@@ -447,91 +423,9 @@ public class HomePanel extends UiPart<Region> {
             extendedScreenPlaceHolder.getChildren().setAll(statsGraphPlaceHolder);
         }
     }
-    void hide() {
-        primaryStage.hide();
-    }
-
-    private void setTitle(String appTitle) {
-        primaryStage.setTitle(appTitle);
-    }
-
-    /**
-     * Sets the given image as the icon of the main window.
-     *
-     * @param iconSource e.g. {@code "/images/help_icon.png"}
-     */
-    private void setIcon(String iconSource) {
-        FxViewUtil.setStageIcon(primaryStage, iconSource);
-    }
-
-    /**
-     * Sets the default size based on user preferences.
-     */
-    private void setWindowDefaultSize(UserPrefs prefs) {
-        primaryStage.setHeight(prefs.getGuiSettings().getWindowHeight());
-        primaryStage.setWidth(prefs.getGuiSettings().getWindowWidth());
-        if (prefs.getGuiSettings().getWindowCoordinates() != null) {
-            primaryStage.setX(prefs.getGuiSettings().getWindowCoordinates().getX());
-            primaryStage.setY(prefs.getGuiSettings().getWindowCoordinates().getY());
-        }
-    }
-
-    public void setWindowMinSize() {
-        primaryStage.setMinHeight(MIN_HEIGHT);
-        primaryStage.setMinWidth(MIN_WIDTH);
-    }
-
-    /**
-     * Returns the current size and the position of the main Window.
-     */
-    GuiSettings getCurrentGuiSetting() {
-        return new GuiSettings(primaryStage.getWidth(), primaryStage.getHeight(),
-                (int) primaryStage.getX(), (int) primaryStage.getY());
-    }
-
-    /**
-     * Opens the help window.
-     */
-    @FXML
-    public void handleHelp() {
-        HelpWindow helpWindow = new HelpWindow();
-        helpWindow.show();
-    }
-
-    void show() {
-        primaryStage.show();
-    }
-
-    /**
-     * Closes the application.
-     */
-    @FXML
-    private void handleExit() {
-        raise(new ExitAppRequestEvent());
-    }
-
-    public PersonListPanel getPersonListPanel() {
-        return this.personListPanel;
-    }
-
-    public ExtendedPersonCard getExtendedPersonCard() {
-        return this.extendedPersonCard;
-    }
-
-    public GraphPanel getGraphPanel() {
-        return this.graphPanel;
-    }
-
-    public StatisticsPanel getStatisticsPanel() {
-        return this.statisticsPanel;
-    }
-
-    @Subscribe
-    private void handleShowHelpEvent(ShowHelpRequestEvent event) {
-        logger.info(LogsCenter.getEventHandlingLogMessage(event));
-        handleHelp();
-    }
-
+```
+###### \java\seedu\address\ui\MainWindow.java
+``` java
     @Subscribe
     private void handleJumpRequestEvent(JumpToListRequestEvent event) {
         setScreenDisplay(false);
@@ -543,7 +437,7 @@ public class HomePanel extends UiPart<Region> {
     }
 }
 ```
-###### /resources/view/GraphPanel.fxml
+###### \resources\view\GraphPanel.fxml
 ``` fxml
 
 <?import javafx.scene.chart.BarChart?>

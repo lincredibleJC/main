@@ -178,6 +178,8 @@ public class MainWindow extends UiPart<Region> {
             extendedScreenPlaceHolder.getChildren().setAll(statsGraphPlaceHolder);
         }
     }
+    //@@author
+
     void hide() {
         primaryStage.hide();
     }
@@ -263,6 +265,7 @@ public class MainWindow extends UiPart<Region> {
         handleHelp();
     }
 
+    //@@author nahtanojmil
     @Subscribe
     private void handleJumpRequestEvent(JumpToListRequestEvent event) {
         setScreenDisplay(false);
